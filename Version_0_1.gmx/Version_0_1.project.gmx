@@ -46,6 +46,8 @@
       <script>scripts\vec_vec_intersection.gml</script>
       <script>scripts\__vec_cir_intersection.gml</script>
       <script>scripts\vec_cir_intersection.gml</script>
+      <script>scripts\__cir_cir_intersection.gml</script>
+      <script>scripts\cir_cir_intersection.gml</script>
     </scripts>
     <scripts name="Utils">
       <script>scripts\Array.gml</script>

@@ -48,6 +48,39 @@
           <argument>
             <kind>1</kind>
             <string>/// Catch CIRCLE message
+
+// o_c is last created circle
+var o_c = instance_find(OCircle, instance_number(OCircle) - 1);
+
+// Circle vector intersection
+for (var i = 0; i &lt; instance_number(OVector); i++) {
+    var o_ab = instance_find(OVector, i);
+    var j = vec_cir_intersection(o_ab, o_c);
+    if (j[0] != noone) {
+        var j_0 = j[0];
+        instance_create(j_0[X], j_0[Y], OPunto)
+    }
+    if (j[1] != noone) {
+        var j_1 = j[1];
+        instance_create(j_1[X], j_1[Y], OPunto)
+    }
+}
+
+/////////////////////////////////////////////////////////////////////
+
+// Circle circle intersection
+for (var i = 0; i &lt; instance_number(OCircle) - 1; i++) {
+    var o_r = instance_find(OCircle, i);
+    var j = cir_cir_intersection(o_c, o_r);
+    if (j[0] != noone) {
+        var j_0 = j[0];
+        instance_create(j_0[X], j_0[Y], OPunto)                
+    } 
+    if (j[1] != noone) {
+        var j_1 = j[1];
+        instance_create(j_1[X], j_1[Y], OPunto)
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -74,11 +107,27 @@
 
 // ab and cd just naming convention
 var o_cd = instance_find(OVector, instance_number(OVector) - 1);
+
+// vector vector intersection
 for (var i = 0; i &lt; instance_number(OVector) - 1; i++) {
     var o_ab = instance_find(OVector, i);
     var j = vec_vec_intersection(o_ab, o_cd);
     if (j != noone)
         instance_create(j[X], j[Y], OPunto)
+}
+
+// vector circle intersection
+for (var i = 0; i &lt; instance_number(OCircle); i++) {
+    var o_r = instance_find(OCircle, i);
+    var j = vec_cir_intersection(o_cd, o_r);
+    if (j[0] != noone) {
+        var j_0 = j[0];
+        instance_create(j_0[X], j_0[Y], OPunto);
+    }
+    if (j[1] != noone) {
+        var j_1 = j[1];
+        instance_create(j_1[X], j_1[Y], OPunto);
+    }
 }
 </string>
           </argument>

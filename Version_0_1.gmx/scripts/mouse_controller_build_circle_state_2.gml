@@ -8,8 +8,10 @@ if (cursor_in_game_field) {
 }
 
 if (mouse_pressed) {
-    global.active_circle = noone;
+    global.active_circle = noone; 
     state = mouse_controller_build_circle_state_1
+    // Circle is builded. Check intersection
+    with (intersection_controller) event_user(CIRCLE);
 } else if (tab_pressed) {
     state = mouse_controller_build_circle_state_3
 }

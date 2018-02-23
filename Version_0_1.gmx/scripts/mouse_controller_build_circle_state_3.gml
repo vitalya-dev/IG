@@ -9,7 +9,6 @@ if (active_circle.tab_index == -1) {
 } 
 
 
-
 var esc_pressed = keyboard_check_pressed(vk_escape)
 var tab_pressed = keyboard_check_pressed(vk_tab);
 var left_mouse_pressed = mouse_check_button_pressed(mb_left)
@@ -19,6 +18,8 @@ if (left_mouse_pressed) {
     active_circle.tab_index = -1
     global.active_circle = noone
     state = mouse_controller_build_circle_state_1
+    // Circle is builded. Check intersection
+    with (intersection_controller) event_user(CIRCLE);
 }
 
 if (right_mouse_pressed) {

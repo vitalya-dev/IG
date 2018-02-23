@@ -4,7 +4,7 @@ var r = argument2
 
 var vertex = array_create(60)
 for (var i = 0, j = 0; i < 360; i += 6) {
-    vartex[j++] = Point(r * cos(degtorad(i)) + cx, r * cos(degtorad(i)) + cy);
+    vertex[j++] = Point(r * cos(degtorad(i)) + cx, r * sin(degtorad(i)) + cy);
 }
 
 var edges = array_create(60)
