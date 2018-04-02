@@ -29,7 +29,8 @@
 ////////////////////////////////////
 colour = make_colour_rgb(65, 8, 176)
 ////////////////////////////////////
-r = noone
+r = 0  
+c = noone 
 ////////////////////////////////////
 tab_index = -1
 </string>
@@ -54,8 +55,11 @@ tab_index = -1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (r != noone)
-    draw_circle_colour(r.a.x, r.a.y, segment_length(a), colour, colour, true) 
+            <string>if (r &gt; 0 &amp;&amp; c != noone) {
+    draw_circle_colour(c.x, c.y, r, colour, colour, true)
+    if (OCircle.active_one = self) // draw guides
+        draw_line_width_colour(c.x, c.y, mouse_x, mouse_y, 2, colour, colour)
+} 
 </string>
           </argument>
         </arguments>

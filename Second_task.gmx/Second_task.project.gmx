@@ -12,6 +12,7 @@
         <sprite>sprites\punto_tool_sprite</sprite>
         <sprite>sprites\circle_tool_sprite</sprite>
         <sprite>sprites\segment_tool_sprite</sprite>
+        <sprite>sprites\ray_tool_sprite</sprite>
       </sprites>
     </sprites>
     <sprites name="Misc">
@@ -36,6 +37,8 @@
         <script>scripts\game_controller_build_circle_state_3.gml</script>
         <script>scripts\game_controller_build_segment_state_1.gml</script>
         <script>scripts\game_controller_build_segment_state_2.gml</script>
+        <script>scripts\game_controller_build_ray_state_1.gml</script>
+        <script>scripts\game_controller_build_ray_state_2.gml</script>
       </scripts>
     </scripts>
     <scripts name="Constructors">
@@ -52,9 +55,13 @@
       <script>scripts\cir_cir_intersection.gml</script>
     </scripts>
     <scripts name="Utils">
-      <script>scripts\segment_length.gml</script>
       <script>scripts\instance_nearby.gml</script>
       <script>scripts\euclidean_distance.gml</script>
+      <script>scripts\segment_length.gml</script>
+      <scripts name="Vector Math">
+        <script>scripts\normal_2.gml</script>
+        <script>scripts\scalar_product.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Datatypes">
       <script>scripts\Point.gml</script>
@@ -73,6 +80,7 @@
     <scripts name="Propositions">
       <script>scripts\is_polygon.gml</script>
       <script>scripts\is_isosceles.gml</script>
+      <script>scripts\is_connected.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -82,6 +90,7 @@
         <object>objects\punto_tool</object>
         <object>objects\circle_tool</object>
         <object>objects\segment_tool</object>
+        <object>objects\ray_tool</object>
       </objects>
     </objects>
     <objects name="Misc">
@@ -99,10 +108,12 @@
     </objects>
     <objects name="Levels">
       <object>objects\challenge_1</object>
+      <object>objects\challenge_2</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\level_1</room>
+    <room>rooms\Level_2</room>
+    <room>rooms\Level_1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

@@ -20,5 +20,6 @@ if (tab_pressed && instance_number(OCircle) > 1) {
 if (mb_left_pressed) {
     with (intersection_controller)
         event_user(CIRCLE)
+    OCircle.active_one = noone
     state = game_controller_build_circle_state_1
 }
