@@ -3,9 +3,9 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>OPrimitive</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,19 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>active_one = noone
-/////////////////////////////////////////////////
-// Constructor initialize it. Because it can be existing points.
-a = noone 
-b = noone
-////////////////////////////////////////////////
-colour = make_colour_rgb(65, 8, 176)
+            <string>snapshots = ds_stack_create()
+event_user(MAKE)
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="7" enumb="11">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -54,8 +49,38 @@ colour = make_colour_rgb(65, 8, 176)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (a != noone &amp;&amp; b != noone)
-    draw_line_width_colour(a.x, a.y, b.x, b.y, 5, colour, colour)
+            <string>show_debug_message("POP")
+if (ds_stack_size(snapshots) &gt; 1) {
+    var s2 = ds_stack_pop(snapshots);
+    var s1 = ds_stack_top(snapshots);
+    for (var i = s1; i &lt; s2; i++)
+        with (instance_find(junk, i))
+            instance_destroy()
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>show_debug_message("PUSH")
+ds_stack_push(snapshots, instance_number(junk))
 </string>
           </argument>
         </arguments>

@@ -22,8 +22,13 @@
     <sprites name="Icons">
       <sprite>sprites\debug_icon</sprite>
       <sprite>sprites\game_controller_icon</sprite>
+      <sprite>sprites\snapshot_controller_icon</sprite>
       <sprite>sprites\intersection_controller_icon</sprite>
       <sprite>sprites\challenge_xxx_icon</sprite>
+    </sprites>
+    <sprites name="Editbar">
+      <sprite>sprites\editbar_sprite</sprite>
+      <sprite>sprites\undo_button_sprite</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -97,6 +102,10 @@
         <object>objects\ray_tool</object>
       </objects>
     </objects>
+    <objects name="Editbar">
+      <object>objects\editbar</object>
+      <object>objects\undo_button</object>
+    </objects>
     <objects name="Misc">
       <object>objects\game_field</object>
       <object>objects\debug</object>
@@ -104,8 +113,10 @@
     <objects name="Controllers">
       <object>objects\game_controller</object>
       <object>objects\intersection_controller</object>
+      <object>objects\snapshot_controller</object>
     </objects>
     <objects name="Primitives">
+      <object>objects\OPrimitive</object>
       <object>objects\OPunto</object>
       <object>objects\OCircle</object>
       <object>objects\OSegment</object>

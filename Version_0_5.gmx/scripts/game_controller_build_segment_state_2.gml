@@ -17,6 +17,8 @@ if (mb_left_pressed && cursor_on_game_field) {
     //////////////////////////////////////////////////////////////////////////////////
     with (intersection_controller)
         event_user(SEGMENT)
+    with (snapshot_controller)
+        event_user(MAKE)
     ///////////////////////////////////////////////////////////////////////////////////
     state = game_controller_build_segment_state_1
 }
