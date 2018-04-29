@@ -3,6 +3,76 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="6" name="datafiles">
+    <datafile>
+      <name>Level_draw_circle.png</name>
+      <exists>-1</exists>
+      <size>32903</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Level_draw_circle.png</filename>
+    </datafile>
+    <datafile>
+      <name>Level_draw_segment.png</name>
+      <exists>-1</exists>
+      <size>6693</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Level_draw_segment.png</filename>
+    </datafile>
+    <datafile>
+      <name>Level_draw_triangle.png</name>
+      <exists>-1</exists>
+      <size>17757</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Level_draw_triangle.png</filename>
+    </datafile>
+    <datafile>
+      <name>Level_draw_triangle_2.png</name>
+      <exists>-1</exists>
+      <size>19205</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Level_draw_triangle_2.png</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -49,7 +119,6 @@
         <script>scripts\game_controller_build_punto_state_1.gml</script>
         <script>scripts\game_controller_build_circle_state_1.gml</script>
         <script>scripts\game_controller_build_circle_state_2.gml</script>
-        <script>scripts\game_controller_build_circle_state_3.gml</script>
         <script>scripts\game_controller_build_segment_state_1.gml</script>
         <script>scripts\game_controller_build_segment_state_2.gml</script>
         <script>scripts\game_controller_build_ray_state_1.gml</script>
@@ -157,11 +226,10 @@
     </objects>
     <objects name="Challenge">
       <object>objects\challenge_xxx</object>
-      <object>objects\challenge_1</object>
-      <object>objects\challenge_2</object>
-      <object>objects\challenge_3</object>
-      <object>objects\challenge_4</object>
-      <object>objects\challenge_5</object>
+      <object>objects\challenge_draw_circle</object>
+      <object>objects\challenge_draw_segment</object>
+      <object>objects\challenge_draw_triangle</object>
+      <object>objects\challenge_draw_triangle_2</object>
     </objects>
     <objects name="Effects">
       <object>objects\__ballon_effect</object>
@@ -175,12 +243,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Level_4</room>
-    <room>rooms\Level_5</room>
-    <room>rooms\Level_3</room>
-    <room>rooms\Level_2</room>
-    <room>rooms\Level_1</room>
-    <room>rooms\Level_nomass</room>
+    <room>rooms\Level_draw_triangle_2</room>
+    <room>rooms\Level_draw_triangle</room>
+    <room>rooms\Level_draw_circle</room>
+    <room>rooms\Level_draw_segment</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

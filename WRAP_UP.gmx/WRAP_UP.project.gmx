@@ -39,6 +39,13 @@
       <sprite>sprites\editbar_sprite</sprite>
       <sprite>sprites\undo_button_sprite</sprite>
     </sprites>
+    <sprites name="Chalenges">
+      <sprite>sprites\challenge_4_info</sprite>
+      <sprite>sprites\challenge_draw_circle_info</sprite>
+      <sprite>sprites\challenge_draw_segment_info</sprite>
+      <sprite>sprites\challenge_draw_triangle_info</sprite>
+      <sprite>sprites\challenge_draw_triangle_2_info</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -157,7 +164,10 @@
     </objects>
     <objects name="Challenge">
       <object>objects\challenge_xxx</object>
-      <object>objects\challenge_1</object>
+      <object>objects\challenge_draw_segment</object>
+      <object>objects\challenge_draw_circle</object>
+      <object>objects\challenge_draw_triangle</object>
+      <object>objects\challenge_draw_triangle_2</object>
       <object>objects\challenge_2</object>
       <object>objects\challenge_3</object>
       <object>objects\challenge_4</object>
@@ -175,11 +185,15 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Level_4</room>
+    <room>rooms\Level_draw_triangle_2</room>
+    <room>rooms\Level_draw_triangle</room>
+    <room>rooms\Level_draw_segment</room>
+    <room>rooms\Level_draw_circle</room>
     <room>rooms\Level_5</room>
+    <room>rooms\room6</room>
+    <room>rooms\Level_4</room>
     <room>rooms\Level_3</room>
     <room>rooms\Level_2</room>
-    <room>rooms\Level_1</room>
     <room>rooms\Level_nomass</room>
   </rooms>
   <help>
