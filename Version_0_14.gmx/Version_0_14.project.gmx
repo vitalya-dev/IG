@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="6" name="datafiles">
+  <datafiles number="18" name="datafiles">
     <datafile>
       <name>Level_draw_triangle_2.png</name>
       <exists>-1</exists>
@@ -71,6 +71,74 @@
         </Config>
       </ConfigOptions>
       <filename>Level_draw_triangle.png</filename>
+    </datafile>
+    <datafile>
+      <name>Level_draw_bisector.png</name>
+      <exists>-1</exists>
+      <size>9475</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Level_draw_bisector.png</filename>
+    </datafile>
+    <datafile>
+      <name>Level_draw_normal.png</name>
+      <exists>-1</exists>
+      <size>6697</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Level_draw_normal.png</filename>
+    </datafile>
+    <datafile>
+      <name>Level_draw_symetry.png</name>
+      <exists>-1</exists>
+      <size>11975</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Level_draw_symetry.png</filename>
+    </datafile>
+    <datafile>
+      <name>Level_draw_symetry_2.png</name>
+      <exists>-1</exists>
+      <size>16194</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Level_draw_symetry_2.png</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
@@ -149,6 +217,7 @@
       <script>scripts\instance_nearby.gml</script>
       <script>scripts\euclidean_distance.gml</script>
       <script>scripts\segment_length.gml</script>
+      <script>scripts\rotate.gml</script>
       <scripts name="Vector Operations">
         <script>scripts\vector_scalar_product.gml</script>
         <script>scripts\vector_length.gml</script>
@@ -182,6 +251,7 @@
       <script>scripts\is_segment_connected.gml</script>
       <script>scripts\is_endpoint.gml</script>
       <script>scripts\is_on.gml</script>
+      <script>scripts\eq.gml</script>
     </scripts>
     <scripts name="Effects">
       <script>scripts\balloon_effect.gml</script>
@@ -197,6 +267,7 @@
     <objects name="Toolbar">
       <object>objects\toolbar</object>
       <objects name="Tools">
+        <object>objects\basic_tool</object>
         <object>objects\punto_tool</object>
         <object>objects\circle_tool</object>
         <object>objects\segment_tool</object>
@@ -230,6 +301,11 @@
       <object>objects\challenge_draw_segment</object>
       <object>objects\challenge_draw_triangle</object>
       <object>objects\challenge_draw_triangle_2</object>
+      <object>objects\challenge_draw_bisector</object>
+      <object>objects\challenge_draw_normal</object>
+      <object>objects\challenge_draw_symetry</object>
+      <object>objects\challenge_draw_symetry_2</object>
+      <object>objects\challenge_draw_parralel</object>
     </objects>
     <objects name="Effects">
       <object>objects\__ballon_effect</object>
@@ -243,6 +319,11 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Level_draw_parallel</room>
+    <room>rooms\Level_draw_symetry_2</room>
+    <room>rooms\Level_draw_symetry</room>
+    <room>rooms\Level_draw_normal</room>
+    <room>rooms\Level_draw_bisector</room>
     <room>rooms\Level_draw_triangle_2</room>
     <room>rooms\Level_draw_triangle</room>
     <room>rooms\Level_draw_circle</room>
